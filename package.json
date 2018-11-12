@@ -1,0 +1,44 @@
+{
+  "name": "callbag-timeout",
+  "version": "0.0.0",
+  "description": "👜 Callbag operator which errors if source does not emit before specified duration.",
+  "main": "./dist/callbag-timeout.cjs.js",
+  "module": "./dist/callbag-timeout.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Warning: no test specified\" || jest --env=node",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "preversion": "npm test",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andarist/callbag-timeout.git"
+  },
+  "keywords": [
+    "callbag",
+    "callbags"
+  ],
+  "author": "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andarist/callbag-timeout/issues"
+  },
+  "homepage": "https://github.com/Andarist/callbag-timeout#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "husky": "^1.1.3",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.0",
+    "rollup-plugin-babel": "^4.0.3"
+  }
+}
