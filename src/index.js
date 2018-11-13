@@ -21,7 +21,7 @@ export default function timeout(delay) {
 
         scheduleTimeout(absoluteDelay ? delay - Date.now() : delay)
 
-        sink((type, data) => {
+        sink(0, (type, data) => {
           if (type === 2) {
             clearTimeout(timerId)
           }
